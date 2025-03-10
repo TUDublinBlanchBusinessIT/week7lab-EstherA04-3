@@ -27,6 +27,7 @@
               <a class="nav-link" href={{ route('courts.create')}}>Court List</a>
               </li>
             </ul>
+            @include('layouts.navAuth')
           </div>
         </nav>
         <div id="page-content-wrapper">
@@ -46,4 +47,5 @@
         <script src="{{asset('js/app.js')}}"></script>
         @stack('js_scripts')
     </body>
-</html>
+</html
+=====
