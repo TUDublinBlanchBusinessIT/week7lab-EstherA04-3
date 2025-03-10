@@ -1,5 +1,19 @@
 <ul class="nav navbar-nav pull-right">
-    <li><a href="#register">Register</a></li>
-    <li><a href="#Login">Login</a></li>
-    <li><a href="#Logoff">Logoff</a></li>
+    @if (Auth::guest())
+        <li>
+            <a href="{{ route('register') }}">
+                Register <span class="glyphicon glyphicon-pencil"></span>
+            </a>
+        </li>
+        <li>
+            <a href="{{ route('login') }}">
+                Login <span class="glyphicon glyphicon-log-in"></span>
+            </a>
+        </li>
+    @else
+        ‹a href="{{ route('logout') }}"›Logout
+        ‹span class="glyphicon glyphicon-log-out"></span›
+        </a>
+        </li>
+    @endif
 </ul>
